@@ -197,7 +197,7 @@ class Report:
             elif self.config.dbType == 'jsonql':
                 if self.config.jsonQLQuery is None:
                     # try to get jsonql query stored in the report
-                    self.config.jsonQuery = self.get_main_dataset_query()
+                    self.config.jsonQLQuery = self.get_main_dataset_query()
                 db = Db()
                 ds = db.get_jsonql_datasource(self.config)
                 self.jasper_print = self.jvJasperFillManager.fillReport(self.jasper_report, parameters, ds)
